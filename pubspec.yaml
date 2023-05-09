@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_screenutil: 5.0.1
+  fluttertoast: ^8.2.1
   get: ^4.6.5
   get_storage: ^2.0.3
   http: ^0.13.5

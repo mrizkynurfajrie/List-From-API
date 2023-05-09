@@ -20,6 +20,37 @@ class AppColor {
   );
   static const int _neutral = 0xFF111927;
 
+  static const MaterialColor error = MaterialColor(
+    _error,
+    <int, Color>{
+      25: Color(0xFFFFFBFA),
+      50: Color(0xFFFEF3F2),
+      100: Color(0xFFFEE4E2),
+      200: Color(0xFFFECDCA),
+      300: Color(0xFFFDA29B),
+      400: Color(0xFFF97066),
+      500: Color(_error),
+      600: Color(0xFFD92D20),
+      700: Color(0xFFB42318),
+      800: Color(0xFF912018),
+      900: Color(0xFF7A271A),
+    },
+  );
+  static const int _error = 0xFFF04438;
+
+  static const Map<int, Color> color = {
+    50: Color.fromRGBO(136, 14, 79, .1),
+    100: Color.fromRGBO(136, 14, 79, .2),
+    200: Color.fromRGBO(136, 14, 79, .3),
+    300: Color.fromRGBO(136, 14, 79, .4),
+    400: Color.fromRGBO(136, 14, 79, .5),
+    500: Color.fromRGBO(136, 14, 79, .6),
+    600: Color.fromRGBO(136, 14, 79, .7),
+    700: Color.fromRGBO(136, 14, 79, .8),
+    800: Color.fromRGBO(136, 14, 79, .9),
+    900: Color.fromRGBO(136, 14, 79, 1),
+  };
+
   //GRADIENT
   static const LinearGradient shimmerGradient = LinearGradient(
     begin: Alignment.topLeft,
