@@ -1,4 +1,4 @@
-import 'package:arkamaya_test/features/create_users/controller_create_users.dart';
+import 'package:arkamaya_test/features/about/controller_about.dart';
 import 'package:arkamaya_test/shared/constants/colors.dart';
 import 'package:arkamaya_test/shared/constants/styles.dart';
 import 'package:arkamaya_test/shared/widgets/loading_indicator.dart';
@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class PageCreateUsers extends GetView<ControllerCreateUsers> {
-  const PageCreateUsers({super.key});
+class PageAbout extends GetView<ControllerAbout> {
+  const PageAbout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class PageCreateUsers extends GetView<ControllerCreateUsers> {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       center: Center(
         child: Text(
-          'Create',
+          'About',
           style: TextStyles.inter.copyWith(
             fontSize: FontSizes.s14,
             color: AppColor.whiteColor,
