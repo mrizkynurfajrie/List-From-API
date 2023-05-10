@@ -2,6 +2,7 @@ import 'package:arkamaya_test/shared/constants/colors.dart';
 import 'package:arkamaya_test/shared/helpers/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class BorderStyles {
   static Border borderGrey =
       Border.all(color: Colors.grey.withOpacity(0.4), width: 1.5);
@@ -359,6 +360,13 @@ class Shadows {
             spreadRadius: 0,
             blurRadius: 8,
             offset: const Offset(0, 4)),
+      ];
+  static List<BoxShadow> get shadowsUp => [
+        BoxShadow(
+            color: const Color(0xff333333).withOpacity(.15),
+            spreadRadius: 1,
+            blurRadius: 3,
+            offset: const Offset(-1, 0)),
       ];
 }
 

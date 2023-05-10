@@ -1,3 +1,4 @@
+import 'package:arkamaya_test/shared/constants/assets.dart';
 import 'package:arkamaya_test/shared/constants/colors.dart';
 import 'package:arkamaya_test/shared/widgets/menu_item_image.dart';
 import 'package:flutter/material.dart';
@@ -76,10 +77,10 @@ class CustomBottomNavBar extends StatelessWidget {
             },
             label: 'List Users'.tr,
             isSelected: selectedIndex == 0,
-            iconPrimary: 'assets/home.svg',
+            iconPrimary: AppIcons.userList,
             primaryColor: selectedIndex == 0
                 ? AppColor.primaryColor
-                : AppColor.neutral.shade600,
+                : AppColor.secondaryColor,
           ),
           _itemMenu(
             context,
@@ -88,10 +89,10 @@ class CustomBottomNavBar extends StatelessWidget {
             },
             label: 'Add New'.tr,
             isSelected: selectedIndex == 1,
-            iconPrimary: 'assets/profile.svg',
+            iconPrimary: AppIcons.userAdd,
             primaryColor: selectedIndex == 1
                 ? AppColor.primaryColor
-                : AppColor.neutral.shade600,
+                : AppColor.secondaryColor,
           ),
           _itemMenu(
             context,
@@ -100,10 +101,10 @@ class CustomBottomNavBar extends StatelessWidget {
             },
             label: 'About'.tr,
             isSelected: selectedIndex == 2,
-            iconPrimary: 'assets/profile.svg',
+            iconPrimary: AppIcons.userAbout,
             primaryColor: selectedIndex == 2
                 ? AppColor.primaryColor
-                : AppColor.neutral.shade600,
+                : AppColor.secondaryColor,
           ),
         ],
       ),

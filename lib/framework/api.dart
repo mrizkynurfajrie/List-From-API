@@ -4,7 +4,27 @@ import 'dart:developer';
 import 'package:http/http.dart' as http;
 
 class Api {
-  String baseUrl = 'https://reqres.in/';
+  String baseUrl = 'https://reqres.in/api/';
+
+  Future<dynamic> apiJsonGetWithPage(
+    String url,
+    String page,
+  ) async {
+    Map<String, String> headers = {
+      'content-Type': 'application/json',
+    };
+    log('headers : $headers');
+    log('url : $baseUrl$url$page');
+
+    http.Response r = await http.get(
+      Uri.parse(baseUrl + url + page),
+      headers: headers,
+    );
+    var data = json.decode(r.body);
+    log('status code : ${r.statusCode}');
+
+    return data;
+  }
 
   Future<dynamic> apiJsonGet(
     String url,
@@ -13,7 +33,7 @@ class Api {
       'content-Type': 'application/json',
     };
     log('headers : $headers');
-    log('url : $url');
+    log('url : $baseUrl$url');
 
     http.Response r = await http.get(
       Uri.parse(baseUrl + url),
