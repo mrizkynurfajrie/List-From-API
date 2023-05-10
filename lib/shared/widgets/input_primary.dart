@@ -2,6 +2,7 @@ import 'package:arkamaya_test/shared/constants/colors.dart';
 import 'package:arkamaya_test/shared/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InputPrimary extends StatefulWidget {
   final String hintText;
@@ -78,10 +79,10 @@ class _InputPrimaryState extends State<InputPrimary> {
             ? SizedBox(
                 child: Text(
                   widget.label,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
+                  style: TextStyles.inter.copyWith(
+                    fontSize: FontSizes.s12,
                     color: AppColor.neutral,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               )
@@ -106,13 +107,19 @@ class _InputPrimaryState extends State<InputPrimary> {
             inputFormatters: widget.inputFormatters,
             textCapitalization: widget.textCapitalization,
             validator: widget.validate,
-            style: const TextStyle(
-              fontSize: 12,
+            style: TextStyles.inter.copyWith(
+              fontSize: FontSizes.s12,
               color: AppColor.neutral,
+              fontWeight: FontWeight.w400,
             ),
             decoration: inputDecoration(
               hintText: widget.hintText,
-              hintStyles: widget.hintStyles,
+              hintStyles: widget.hintStyles ??
+                  TextStyles.inter.copyWith(
+                    fontSize: FontSizes.s12,
+                    color: AppColor.neutral.shade300,
+                    fontWeight: FontWeight.w400,
+                  ),
               prefixIcon: widget.prefixIcon,
               suffixIcon: widget.suffixIcon,
               fontStyle: widget.hintFontStyle,

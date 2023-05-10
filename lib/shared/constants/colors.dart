@@ -70,5 +70,5 @@ class AppColor {
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color blackColor = Color(0xFF000000);
   static const Color bgColor = Color(0xFFF6F1F1);
-  static const Color boxItemColor = Color(0xFF0B2447);
+  static const Color boxSuccessColor = Color(0xFFd5e8d4);
 }

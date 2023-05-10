@@ -10,19 +10,19 @@ class BorderStyles {
   static OutlineInputBorder enableTextField = OutlineInputBorder(
     borderSide:
         BorderSide(color: AppColor.neutral.shade300, width: Strokes.xthin),
-    borderRadius: Corners.smBorder,
+    borderRadius: Corners.lgBorder,
   );
 
   static OutlineInputBorder focusTextField = OutlineInputBorder(
     borderSide:
         const BorderSide(color: AppColor.primaryColor, width: Strokes.thin),
-    borderRadius: Corners.smBorder,
+    borderRadius: Corners.lgBorder,
   );
 
   static OutlineInputBorder disableTextField = OutlineInputBorder(
     borderSide:
         BorderSide(color: AppColor.neutral.shade300, width: Strokes.xthin),
-    borderRadius: Corners.smBorder,
+    borderRadius: Corners.lgBorder,
   );
 
   static OutlineInputBorder registerOutline = OutlineInputBorder(
@@ -33,7 +33,7 @@ class BorderStyles {
 
   static OutlineInputBorder errorTextField = OutlineInputBorder(
     borderSide: const BorderSide(color: AppColor.error, width: Strokes.thin),
-    borderRadius: Corners.smBorder,
+    borderRadius: Corners.lgBorder,
   );
 }
 
